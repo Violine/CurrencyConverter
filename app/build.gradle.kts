@@ -68,17 +68,31 @@ dependencies {
     implementation("androidx.compose.material:material:$COMPOSE_VERSION")
     implementation("androidx.compose.ui:ui-tooling:$COMPOSE_VERSION")
 
-    //lifexycle
+    //lifecycle
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$LIFECYCLE_RUNTIME_VERSION")
     implementation("androidx.activity:activity-compose:$ACTIVITY_COMPOSE_VERSION")
 
     //hilt
-    implementation ("com.google.dagger:hilt-android:$HILT_VERSION")
+    implementation("com.google.dagger:hilt-android:$HILT_VERSION")
     kapt("com.google.dagger:hilt-compiler:$HILT_VERSION")
+
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    kapt("androidx.hilt:hilt-compiler:1.0.0-alpha03")
 
     //retrofit2 + Moshi
     implementation("com.squareup.retrofit2:retrofit:$RETROFIT_VERSION")
     implementation("com.squareup.retrofit2:converter-moshi:$MOSHI_CONVERTER_VERSION")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1")
+
+    // Coroutine Lifecycle Scopes
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.0")
+
+    // Activity KTX for viewModels()
+    implementation("androidx.activity:activity-ktx:1.2.0")
 
     testImplementation("junit:junit:$JUNIT_VERSION")
     androidTestImplementation("androidx.test.ext:junit:$JUNIT_EXT_VERSION")
