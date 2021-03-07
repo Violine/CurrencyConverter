@@ -1,11 +1,13 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 
 plugins {
     id("com.android.application")
     id("dagger.hilt.android.plugin")
-    kotlin("kapt")
     kotlin("android")
+    kotlin("kapt")
 }
+
+val apiUrl: String = gradleLocalProperties(rootDir).getProperty("api_url")
 
 android {
     buildToolsVersion("30.0.3")
@@ -27,6 +29,7 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
+            buildConfigField("String", "apiUrl", apiUrl)
         }
     }
 
@@ -48,6 +51,10 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = COMPOSE_VERSION
     }
+}
+
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {
