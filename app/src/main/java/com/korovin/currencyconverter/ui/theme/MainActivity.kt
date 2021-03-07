@@ -1,4 +1,4 @@
-package com.korovin.currencyconverter
+package com.korovin.currencyconverter.ui.theme
 
 import android.os.Bundle
 import androidx.activity.compose.setContent

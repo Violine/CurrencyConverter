@@ -7,7 +7,7 @@ plugins {
     kotlin("kapt")
 }
 
-val apiUrl: String = gradleLocalProperties(rootDir).getProperty("api_url")
+val apiUrl: String = gradleLocalProperties(rootDir).getProperty("apiUrl")
 
 android {
     buildToolsVersion("30.0.3")
@@ -29,6 +29,9 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
+        }
+
+        debug {
             buildConfigField("String", "apiUrl", apiUrl)
         }
     }
