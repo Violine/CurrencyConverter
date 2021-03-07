@@ -22,3 +22,10 @@ const val JUNIT_EXT_VERSION ="1.1.2"
 
 //Espresso
 const val ESPRESSO_CORE_VERSION = "3.3.0"
+
+//Hilt
+const val HILT_VERSION = "2.33-beta"
+
+//retrofit+Moshi
+const val RETROFIT_VERSION ="2.9.0"
+const val MOSHI_CONVERTER_VERSION="2.4.0"
