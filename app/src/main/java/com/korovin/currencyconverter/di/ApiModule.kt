@@ -1,5 +1,6 @@
 package com.korovin.currencyconverter.di
 
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.korovin.currencyconverter.BuildConfig
 import dagger.Module
 import dagger.Provides
@@ -30,6 +31,7 @@ object ApiModule {
         Retrofit.Builder()
             .baseUrl(baseUrl)
             .addConverterFactory(MoshiConverterFactory.create())
+            .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .client(okHttpClient)
             .build()
 }

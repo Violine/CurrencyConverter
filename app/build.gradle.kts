@@ -65,6 +65,7 @@ dependencies {
     implementation("androidx.core:core-ktx:$CORE_KTX_VERSION")
     implementation("androidx.appcompat:appcompat:$APP_COMPAT_VERSION")
     implementation("com.google.android.material:material:$MATERIAL_VERSION")
+    implementation("androidx.activity:activity-ktx:$ACTIVITY_KTX_VERSION")
 
     //compose
     implementation("androidx.compose.ui:ui:$COMPOSE_VERSION")
@@ -74,28 +75,23 @@ dependencies {
     //lifecycle
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$LIFECYCLE_RUNTIME_VERSION")
     implementation("androidx.activity:activity-compose:$ACTIVITY_COMPOSE_VERSION")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$LIFECYCLE_RUNTIME_VERSION")
 
     //hilt
     implementation("com.google.dagger:hilt-android:$HILT_VERSION")
     kapt("com.google.dagger:hilt-compiler:$HILT_VERSION")
 
-    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
-    kapt("androidx.hilt:hilt-compiler:1.0.0-alpha03")
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel:$HILT_COMPILER_VERSION")
+    kapt("androidx.hilt:hilt-compiler:$HILT_COMPILER_VERSION")
 
     //retrofit2 + Moshi
     implementation("com.squareup.retrofit2:retrofit:$RETROFIT_VERSION")
     implementation("com.squareup.retrofit2:converter-moshi:$MOSHI_CONVERTER_VERSION")
+    implementation("com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$COROUTINES_ADAPTER_VERSION")
 
     // Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1")
-
-    // Coroutine Lifecycle Scopes
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.0")
-
-    // Activity KTX for viewModels()
-    implementation("androidx.activity:activity-ktx:1.2.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$COROUTINES_VERSION")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$COROUTINES_VERSION")
 
     testImplementation("junit:junit:$JUNIT_VERSION")
     androidTestImplementation("androidx.test.ext:junit:$JUNIT_EXT_VERSION")
