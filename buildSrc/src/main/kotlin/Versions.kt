@@ -32,6 +32,7 @@ const val HILT_COMPILER_VERSION = "1.0.0-alpha03"
 const val RETROFIT_VERSION = "2.9.0"
 const val MOSHI_CONVERTER_VERSION = "2.4.0"
 const val COROUTINES_ADAPTER_VERSION = "0.9.2"
+const val LOGGING_INTERCEPTOR_VERSION = "4.0.1"
 
 //Coroutines
 const val COROUTINES_VERSION = "1.4.1"

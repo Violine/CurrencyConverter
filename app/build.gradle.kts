@@ -73,9 +73,9 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling:$COMPOSE_VERSION")
 
     //lifecycle
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$LIFECYCLE_RUNTIME_VERSION")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$LIFECYCLE_VERSION")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$LIFECYCLE_VERSION")
     implementation("androidx.activity:activity-compose:$ACTIVITY_COMPOSE_VERSION")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$LIFECYCLE_RUNTIME_VERSION")
 
     //hilt
     implementation("com.google.dagger:hilt-android:$HILT_VERSION")
@@ -88,6 +88,7 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:$RETROFIT_VERSION")
     implementation("com.squareup.retrofit2:converter-moshi:$MOSHI_CONVERTER_VERSION")
     implementation("com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$COROUTINES_ADAPTER_VERSION")
+    implementation("com.squareup.okhttp3:logging-interceptor:$LOGGING_INTERCEPTOR_VERSION")
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$COROUTINES_VERSION")
